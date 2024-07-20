@@ -9,7 +9,7 @@ import SearchForm from "../SearchForm";
 const Aside = () => {
   return (
     <aside className="space-y-6 sticky top-0 w-full">
-      <span className="hidden lg:block">
+      <span className="hidden md:block">
         <SearchForm />
       </span>
 

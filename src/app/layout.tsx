@@ -39,7 +39,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} bg-white dark:bg-gray-800`}>
         <Navbar />
-        <div className="container grid lg:grid-cols-3 gap-10 mt-8 mb-16 lg:mb-32">
+        <div className="container grid md:grid-cols-2 lg:grid-cols-3 gap-10 mt-8 mb-16 lg:mb-32">
           <main className="lg:col-span-2">{children}</main>
           <aside>
             <Aside />

@@ -5,7 +5,7 @@ import SearchForm from "../SearchForm";
 const Home = () => {
   return (
     <div>
-      <div className="lg:hidden px-2 mb-4">
+      <div className="md:hidden px-2 mb-4">
         <SearchForm />
       </div>
       <Main />
