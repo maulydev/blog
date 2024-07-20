@@ -1,24 +1,17 @@
 import React from "react";
-import { IoSearch } from "react-icons/io5";
 import AsideCard from "../AsideCard";
 import PopularPosts from "../popularposts/PopularPosts";
 import Tags from "../tags/Tags";
 import YearFilter from "../years/YearFilter";
 import { MdEmail } from "react-icons/md";
+import SearchForm from "../SearchForm";
 
 const Aside = () => {
   return (
-    <aside className="space-y-6 sticky top-0">
-      <form className="flex">
-        <input
-          type="text"
-          placeholder="Search for posts..."
-          className="border dark:border-gray-700 dark:text-white px-4 py-2 flex-1 dark:bg-gray-700 outline-none rounded-l"
-        />
-        <button className="bg-gray-900 dark:bg-gray-950 text-white px-4 py-2 rounded-r hover:bg-gray-900">
-          <IoSearch />
-        </button>
-      </form>
+    <aside className="space-y-6 sticky top-0 w-full">
+      <span className="hidden lg:block">
+        <SearchForm />
+      </span>
 
       <AsideCard title="Newsletter">
         <form className="flex flex-col gap-4">

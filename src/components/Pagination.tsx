@@ -10,7 +10,7 @@ const Pagination = () => {
       <button className="bg-gray-950 p-3 hover:bg-gray-900 rounded">
         <FaAngleLeft />
       </button>
-      <span className="text-gray-900 dark:text-gray-100">Page 1 of 10</span>
+      <span className="text-gray-900 dark:text-gray-100 text-sm md:text-base">Page 1 of 10</span>
       <button className="bg-gray-950 p-3 hover:bg-gray-900 rounded">
         <FaAngleRight />
       </button>

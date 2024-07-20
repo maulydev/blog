@@ -14,10 +14,13 @@ const Navbar = () => {
   return (
     <nav className="bg-white dark:bg-gray-900 p-3 border-b dark:border-b-gray-700 sticky top-0 z-50">
       <div className="container flex items-center justify-between">
-        <Link href="/" className="font-bold text-blue-500 flex items-center text-xl">
-          <span>
+        <Link href="/">
+          <div className="text-blue-500 text-2xl font-bold">
+            M<span className="text-red-500">.</span>D
+          </div>
+          {/* <span className="font-bold text-blue-500 hidden md:flex items-center text-xl">
             Mauly <span className="text-red-500 text-xl">.</span>dev
-          </span>
+          </span> */}
         </Link>
         <ul className="flex items-center gap-6 dark:text-gray-100">
           <li>
@@ -36,8 +39,11 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <button onClick={ThemeController.toggle} className="bg-gray-100 dark:bg-gray-800 p-2 rounded-full">
-              <MdWbSunny/>
+            <button
+              onClick={ThemeController.toggle}
+              className="bg-gray-100 dark:bg-gray-800 p-2 rounded-full"
+            >
+              <MdWbSunny />
             </button>
           </li>
         </ul>
