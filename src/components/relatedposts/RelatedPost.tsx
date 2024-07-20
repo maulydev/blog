@@ -29,7 +29,7 @@ const RelatedPost = () => {
         </div>
       </div>
       <div className="overflow-hidden" ref={emblaRef}>
-        <div className="flex gap-4">
+        <div className="flex gap-4 max-w-56 md:w-full">
           <RelatedPostCard />
           <RelatedPostCard />
           <RelatedPostCard />

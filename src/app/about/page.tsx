@@ -17,7 +17,7 @@ const page = () => {
           />
         </div>
       </div>
-      <div className="space-y-4">
+      <div className="space-y-4 text-base lg:text-lg">
         <p>
           Hey there! I am{" "}
           <em className="line-through font-medium text-red-500">Mauly .dev</em>{" "}

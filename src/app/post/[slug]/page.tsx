@@ -1,20 +1,24 @@
 import RelatedPost from "@/components/relatedposts/RelatedPost";
+import { FaUser } from "react-icons/fa";
+import { SlCalender } from "react-icons/sl";
 
 /* eslint-disable @next/next/no-img-element */
-export default function Page({ params }: { params: { slug: string } }) {
+export default function Post({ params }: { params: { slug: string } }) {
   return (
-    <div>
-      <div className="h-56 rounded-lg overflow-hidden relative">
+    <div className="">
+      <div className="h-56 rounded-lg overflow-hidden relative dark:border-2 dark:border-gray-700 rounded-xl">
         <img
           src="https://scontent.facc5-1.fna.fbcdn.net/v/t39.30808-6/380795248_122096839748055984_7391263640393971686_n.png?stp=dst-png_p640x640&_nc_cat=106&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeGk9wLmpJAQ2X2APt_Umr_IqbUW3g_r11yptRbeD-vXXL9-9zDmCrnwpuCAyIi9psHdOwB9Fu32eHwp_6gudQ5C&_nc_ohc=Ny0K0RU2jukQ7kNvgF2xCGT&_nc_zt=23&_nc_ht=scontent.facc5-1.fna&oh=00_AYDrYqpBRiJJjZmso-FZysxUtsJiLnoYcWzfnc6db83_tQ&oe=66A169A9"
           alt=""
         />
         <div className="absolute bottom-0 text-sm items-end flex justify-between p-3 z-40 text-white bg-gradient-to-t from-black inset-x-0 h-20">
-          <span>
-            <strong>Author</strong>: Abby Connelly
+          <span className="flex items-center gap-2">
+            <FaUser className="xl:hidden"/>
+            <strong className="hidden xl:flex">Author:</strong> Mauly dotDev
           </span>
-          <span>
-            <strong>Posted on</strong>: April 01, 2022
+          <span className="flex items-center gap-2">
+            <SlCalender className="xl:hidden"/>
+            <strong className="hidden xl:flex">Posted on:</strong> April 01, 2022
           </span>
         </div>
       </div>
