@@ -35,7 +35,7 @@ const ScrollToTop = () => {
       className={`${scrollY > 500
         ? 'visible animate-in fade-in slide-in-from-bottom duration-500'
         : 'invisible animate-out fade-out slide-out-to-bottom duration-500 pointer-events-none'
-      } rounded-full p-3 fixed bottom-5 right-5 lg:bottom-10 lg:right-10 duration-500 bg-blue-500 hover:bg-blue-600 text-white`}
+      } rounded-lg p-3 fixed bottom-5 right-5 lg:bottom-10 lg:right-10 duration-500 bg-blue-500 hover:bg-blue-600 text-white`}
     >
       <FaChevronUp />
     </button>
