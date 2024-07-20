@@ -40,7 +40,7 @@ This Privacy Policy outlines how we collect, use, and protect any personal infor
 `;
 
 const PrivacyPolicy = () => {
-  return <div className="dark:text-gray-100 text-gray-900 prose">
+  return <div className="dark:text-gray-100 text-gray-900 prose dark:prose-invert">
     <Markdown>{policy}</Markdown>
   </div>;
 };
