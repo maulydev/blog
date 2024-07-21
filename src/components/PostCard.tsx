@@ -1,9 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
+import { Post } from "@/lib/definitions";
+import { toRelative } from "@/lib/utils";
 import Link from "next/link";
 import { FaUser } from "react-icons/fa";
 import { SlCalender } from "react-icons/sl";
 
-const PostCard = () => {
+const PostCard = ({ post }: { post: Post }) => {
   return (
     <div className="flex flex-col lg:flex-row gap-2 md:gap-4 p-2 dark:border dark:border-gray-700 rounded-2xl">
       <div className="bg-gray-500 w-full lg:w-56 flex-shrink-0 rounded-xl overflow-hidden dark:border dark:border-gray-700">
@@ -15,27 +17,23 @@ const PostCard = () => {
       </div>
       <div className="p-2 space-y-2 lg:space-y-4 text-gray-900 dark:text-gray-100">
         <Link
-          href="/post/blog-slug-title-here"
+          href={`/post/${post.$id}`}
           className="font-bold text-base lg:text-2xl hover:underline line-clamp-2"
         >
-          Fullstack application with Fastapi and Next JS
+          {post.title}
         </Link>
         <div className="flex justify-between lg:max-w-[80%] text-xs lg:text-base">
           <span className="flex items-center gap-2">
-            <FaUser className="xl:hidden"/>
-            <strong className="hidden xl:flex">Author:</strong> Mauly dotDev
+            <FaUser className="xl:hidden" />
+            <strong className="hidden xl:flex">Author:</strong> {post.author}
           </span>
           <span className="flex items-center gap-2">
-            <SlCalender className="xl:hidden"/>
-            <strong className="hidden xl:flex">Posted on:</strong> April 01, 2022
+            <SlCalender className="xl:hidden" />
+            <strong className="hidden xl:flex">Posted:</strong>{" "}
+            {toRelative(post.$createdAt)}
           </span>
         </div>
-        <p className="line-clamp-2 dark:text-gray-400">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-          facere, natus quae dicta iusto, delectus quidem, minus vero commodi
-          corporis temporibus nihil velit adipisci dolorem veritatis
-          perspiciatis iure error quis.
-        </p>
+        <p className="line-clamp-2 dark:text-gray-400">{post.content}</p>
       </div>
     </div>
   );

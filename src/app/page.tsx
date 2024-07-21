@@ -1,11 +1,12 @@
-import Home from "@/components/home/Home"
+import Home from "@/components/home/Home";
 
-const HomePage = () => {
+const HomePage = ({ searchParams }: { searchParams: any }) => {
+  
   return (
     <div>
-      <Home />
+      <Home searchParams={searchParams} />
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;

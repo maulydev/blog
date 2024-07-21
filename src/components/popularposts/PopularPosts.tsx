@@ -1,19 +1,17 @@
+import { getPopularPosts } from "@/lib/fetcher";
 import AsideCard from "../AsideCard";
 import PostCard from "./PostCard";
 
-const PopularPosts = () => {
+const PopularPosts = async () => {
+  const posts = await getPopularPosts();
   return (
     <AsideCard title="Popular Posts">
       <ul className="space-y-6">
-        <li>
-          <PostCard />
-        </li>
-        <li>
-          <PostCard />
-        </li>
-        <li>
-          <PostCard />
-        </li>
+        {posts.map((post: any) => (
+          <li key={post.$id}>
+            <PostCard post={post} />
+          </li>
+        ))}
       </ul>
     </AsideCard>
   );

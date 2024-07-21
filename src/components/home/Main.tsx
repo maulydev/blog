@@ -1,47 +1,16 @@
+import { getAllPosts } from "@/lib/fetcher";
 import PostCard from "../PostCard";
-
-const Main = () => {
+const Main = async ({ searchParams }: { searchParams: any }) => {
+  console.log(searchParams);
+  const posts = await getAllPosts();
+  
   return (
     <ul className="space-y-8">
-      <li>
-        <PostCard />
-      </li>
-      <li>
-        <PostCard />
-      </li>
-      <li>
-        <PostCard />
-      </li>
-      <li>
-        <PostCard />
-      </li>
-      <li>
-        <PostCard />
-      </li>
-      <li>
-        <PostCard />
-      </li>
-      <li>
-        <PostCard />
-      </li>
-      <li>
-        <PostCard />
-      </li>
-      <li>
-        <PostCard />
-      </li>
-      <li>
-        <PostCard />
-      </li>
-      <li>
-        <PostCard />
-      </li>
-      <li>
-        <PostCard />
-      </li>
-      <li>
-        <PostCard />
-      </li>
+      {posts.map((post: any) => (
+        <li key={post.$id}>
+          <PostCard post={post} />
+        </li>
+      ))}
     </ul>
   );
 };
